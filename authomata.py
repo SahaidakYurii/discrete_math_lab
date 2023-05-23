@@ -71,7 +71,9 @@ def main():
             if random() <= 0.8:
                 print(f"{hour}\tWhat a great morning!")
                 return "eat"
-            print("08:00\tF*ck, I overslept")
+            print(f"{hour}\tZ-z-z...")
+        elif hour == "08:00":
+            print(f"{hour}\tF*ck I overslept!")
             return "commute"
 
     def eat(hour: str):
@@ -86,14 +88,14 @@ def main():
             if random() <= 0.5:
                 print(f"{hour}\tWow, bus came on time")
                 return "lecture_1"
-            print(f"{hour}\tWhere's a bus? I will walk to UCU")
+            print(f"{hour}\tWhere's a bus?..\n\tI will miss the first lecture")
             return "lecture_2"
         if random() <= 0.5:
             print(f"{hour}\tWow, bus came on time")
             if random() <= 0.5:
                 return "gym"
             return "bike_ride"
-        print(f"{hour}\tWhere's a bus? I will walk to home")
+        print(f"{hour}\tWhere's a bus?..\n\tI will miss my training")
         return "homework"
 
     def lec_1(hour: str):
